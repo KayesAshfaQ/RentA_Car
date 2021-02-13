@@ -22,6 +22,7 @@ import com.android.rentacar.blog.InformationActivity;
 import com.android.rentacar.car_order.TravelActivity;
 import com.android.rentacar.car_order.WeddingActivity;
 import com.android.rentacar.history.HistoryActivity;
+import com.android.rentacar.history.HistoryWeddingPackActivity;
 import com.android.rentacar.history.ShopHistoryActivity;
 import com.android.rentacar.history.ShopHistoryDetailsActivity;
 import com.android.rentacar.profile.ProfileActivity;
@@ -222,10 +223,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, WeddingPackActivity.class));
                 break;
 
-            case R.id.setting:
-                Toasty.warning(getApplicationContext(), "setting").show();
-                break;
-
             case R.id.logout:
                 Toasty.error(getApplicationContext(), "logout done").show();
 
@@ -246,6 +243,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.history:
                 startActivity(new Intent(MainActivity.this, HistoryActivity.class));
+                break;
+
+
+            case R.id.wedding_car_history:
+                startActivity(new Intent(MainActivity.this, HistoryWeddingPackActivity.class));
                 break;
 
             case R.id.shop_history:
