@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/profile"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Profile"/>
+
+    <item android:id="@+id/shop"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Shop"/>
+
+    <item android:id="@+id/TravelCar"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Travel Cars"/>
+
+    <item android:id="@+id/WeddingCar"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Wedding Car"/>
+
+    <item android:id="@+id/packages"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Wedding Packages"/>
+
+    <item android:id="@+id/history"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="History"/>
+
+    <item android:id="@+id/shop_history"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Shop History"/>
+
+    <item android:id="@+id/setting"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Settings"/>
+
+    <item android:id="@+id/logout"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Logout"/>
+
+</menu>

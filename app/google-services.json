@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "666900346246",
+    "project_id": "neon-flare-297515",
+    "storage_bucket": "neon-flare-297515.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666900346246:android:e16ddb22559b3171e1e807",
+        "android_client_info": {
+          "package_name": "com.android.rentacar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666900346246-jkc63hi5fm2r6thvk24raiihl44elck2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpV2EmOWlOxqWKOcpbkheEfuxJsL1hqkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666900346246-jkc63hi5fm2r6thvk24raiihl44elck2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

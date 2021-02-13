@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".shop.OrderActivity">
+
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/car" />
+
+            <!--fill-ups-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:drawableStart="@drawable/ic_add_shopping"
+                    android:drawablePadding="10dp"
+                    android:padding="5dp"
+                    android:paddingStart="20dp"
+                    android:text="Total items: "
+                    android:textStyle="bold"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/total_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:padding="8dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_doller"
+                    android:drawablePadding="10dp"
+                    android:padding="5dp"
+                    android:paddingStart="20dp"
+                    android:text="Total Price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:padding="8dp"
+                    android:text="Total price: "
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/paymet_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Payment Method"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:text="Cash on delivery" />
+
+                    <RadioButton
+                        android:id="@+id/bikash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:text="Bikash" />
+
+                    <RadioButton
+                        android:id="@+id/nagad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:text="Nagad" />
+
+                    <RadioButton
+                        android:id="@+id/card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:text="Card - VISA/Master" />
+
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:drawableStart="@drawable/ic_location_dark"
+                    android:drawablePadding="10dp"
+                    android:hint="Deliver Address"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_mobile_no_dark"
+                    android:drawablePadding="10dp"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/reciver_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_passenger_no"
+                    android:drawablePadding="10dp"
+                    android:hint="Reciver Name"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/deliver_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:drawablePadding="10dp"
+                    android:inputType="none"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    android:text="Order Time"
+                    app:drawableStartCompat="@drawable/ic_time_dark"
+                    tools:ignore="TextFields: " />
+
+                <TextView
+                    android:id="@+id/deliver_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="10dp"
+                    android:inputType="none"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    android:text="Approximate Deliver Date: "
+                    app:drawableStartCompat="@drawable/ic_date_dark"
+                    tools:ignore="TextFields" />
+
+
+                <Button
+                    android:id="@+id/confirm_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shapesignup"
+                    android:padding="15dp"
+                    android:shadowColor="@android:color/transparent"
+                    android:text="Confirm Now"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

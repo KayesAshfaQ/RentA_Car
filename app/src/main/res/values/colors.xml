@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A90B0</color>
+    <color name="colorPrimaryDark">#0083A7</color>
+    <color name="colorAccent">#1A90B0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#7BBCCD</color>
+    <color name="cardColor">#8F0303</color>
+    <color name="signupColor">#066e8a</color>
+</resources>
