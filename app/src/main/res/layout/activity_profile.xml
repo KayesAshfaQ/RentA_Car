@@ -42,12 +42,19 @@
         android:visibility="gone"
         tools:ignore="HardcodedText" />
 
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/car" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
@@ -61,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="Moble: "
+                android:text="Mobile: "
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -163,8 +170,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/edit_gender"

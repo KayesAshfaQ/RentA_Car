@@ -34,12 +34,12 @@
                 <item
                     android:id="@+id/history"
                     android:icon="@drawable/ic_history_black"
-                    android:title="Travel Car History" />
+                    android:title="Booked Car History" />
 
                 <item
                     android:id="@+id/wedding_car_history"
                     android:icon="@drawable/ic_history_black"
-                    android:title="Wedding Car History" />
+                    android:title="Wedding Package History" />
 
 
                 <item

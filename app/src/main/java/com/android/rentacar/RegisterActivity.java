@@ -38,11 +38,7 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
-import com.google.firebase.installations.FirebaseInstallations;
+
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -87,8 +83,6 @@ public class RegisterActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
 
 
         //create notification channel
@@ -327,15 +321,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     //signup method
     private void sign_up(String name, String cell, String account, String password, String address, String gender,
-                         String latitude, String longitude, String token)
-    {
+                         String latitude, String longitude, String token) {
 
         loading = new ProgressDialog(this);
         loading.setMessage("Please wait....");
         loading.show();
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<User> call = apiInterface.signUp(name, cell, account, password, gender, address, latitude, longitude, token);
+        Call<User> call = apiInterface.signUp(name, cell, account, password, address, gender, latitude, longitude, token);
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {

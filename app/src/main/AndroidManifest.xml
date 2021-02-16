@@ -36,7 +36,7 @@
         <activity android:name=".history.HistoryWeddingPackActivity" />
         <activity android:name=".wedding_package.WeddingPackOrder" />
         <activity android:name=".wedding_package.WeddingPackDetailsActivity" />
-        <activity android:name=".history.HistoryActivity" />
+        <activity android:name=".history.CarHistoryActivity" />
         <activity android:name=".car_order.CarBookActivity" />
         <activity android:name=".car_order.CarDetailsActivity" />
         <activity android:name=".blog.InformationDetailsActivity" />

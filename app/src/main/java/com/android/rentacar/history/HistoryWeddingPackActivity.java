@@ -42,7 +42,7 @@ public class HistoryWeddingPackActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Recent Histories");
+        getSupportActionBar().setTitle("Wedding pack Histories");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);

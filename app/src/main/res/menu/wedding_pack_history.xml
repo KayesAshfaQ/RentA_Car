@@ -6,7 +6,7 @@
     <item
         app:showAsAction="always"
         android:id="@+id/history_wedding"
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@drawable/ic_history_black"
         android:title="Shop" />
 
 

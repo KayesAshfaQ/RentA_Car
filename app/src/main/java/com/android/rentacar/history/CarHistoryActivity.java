@@ -27,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class HistoryActivity extends AppCompatActivity {
+public class CarHistoryActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private HistoryAdapter adapter;
@@ -39,11 +39,11 @@ public class HistoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
+        setContentView(R.layout.activity_car_history);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Recent Histories");
+        getSupportActionBar().setTitle("Car Book Histories");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -59,10 +59,10 @@ public class HistoryActivity extends AppCompatActivity {
         // Check if Internet present
         if (!cd.isConnectingToInternet()) {
             // Internet Connection is not present
-            Toasty.error(HistoryActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+            Toasty.error(CarHistoryActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
         } else {
             getHistoryData();
-            LinearLayoutManager manager = new LinearLayoutManager(HistoryActivity.this);
+            LinearLayoutManager manager = new LinearLayoutManager(CarHistoryActivity.this);
             recyclerView.setLayoutManager(manager);
 
         }
@@ -91,14 +91,14 @@ public class HistoryActivity extends AppCompatActivity {
                     }
                 }
 
-                adapter = new HistoryAdapter(HistoryActivity.this, bookedCarListCheckedPhone);
+                adapter = new HistoryAdapter(CarHistoryActivity.this, bookedCarListCheckedPhone);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onFailure(Call<List<CarBook>> call, Throwable t) {
                 loading.dismiss();
-                Toasty.error(HistoryActivity.this, "error", Toasty.LENGTH_LONG).show();
+                Toasty.error(CarHistoryActivity.this, "error", Toasty.LENGTH_LONG).show();
             }
         });
 

@@ -2,6 +2,7 @@ package com.android.rentacar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -9,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,10 +23,9 @@ import android.widget.LinearLayout;
 import com.android.rentacar.blog.InformationActivity;
 import com.android.rentacar.car_order.TravelActivity;
 import com.android.rentacar.car_order.WeddingActivity;
-import com.android.rentacar.history.HistoryActivity;
+import com.android.rentacar.history.CarHistoryActivity;
 import com.android.rentacar.history.HistoryWeddingPackActivity;
 import com.android.rentacar.history.ShopHistoryActivity;
-import com.android.rentacar.history.ShopHistoryDetailsActivity;
 import com.android.rentacar.profile.ProfileActivity;
 import com.android.rentacar.shop.CartActivity;
 import com.android.rentacar.shop.CategoryActivity;
@@ -223,26 +224,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, WeddingPackActivity.class));
                 break;
 
-            case R.id.logout:
-                Toasty.error(getApplicationContext(), "logout done").show();
+            case R.id.logout: {
 
-                SharedPreferences preferences = getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.clear();
+                AlertDialog.Builder logoutBuilder = new AlertDialog.Builder(MainActivity.this);
+                logoutBuilder.setMessage("Do you want to logout?");
+                logoutBuilder.setIcon(R.drawable.ic_logout_small_black);
+                logoutBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toasty.error(getApplicationContext(), "logout done").show();
 
-                SharedPreferences preferences2 = getSharedPreferences("prefs", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor2 = preferences2.edit();
-                editor2.clear();
+                        SharedPreferences preferences = getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.clear();
 
-                editor.commit();
-                editor2.commit();
+                        SharedPreferences preferences2 = getSharedPreferences("prefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor2 = preferences2.edit();
+                        editor2.clear();
 
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                finish();
+                        editor.commit();
+                        editor2.commit();
+
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                        finish();
+                    }
+                });
+
+                logoutBuilder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toasty.error(getApplicationContext(), "logout canceled!").show();
+                    }
+                });
+
+                logoutBuilder.create().show();
                 break;
 
+            }
+
             case R.id.history:
-                startActivity(new Intent(MainActivity.this, HistoryActivity.class));
+                startActivity(new Intent(MainActivity.this, CarHistoryActivity.class));
                 break;
 
 

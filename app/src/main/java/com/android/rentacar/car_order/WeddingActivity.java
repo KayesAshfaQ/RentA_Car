@@ -39,7 +39,7 @@ public class WeddingActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Choose Car");
+        getSupportActionBar().setTitle("Wedding Cars");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         recyclerView = findViewById(R.id.recyclerView);
