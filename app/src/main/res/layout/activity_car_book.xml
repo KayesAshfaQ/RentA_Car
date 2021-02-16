@@ -168,17 +168,6 @@
                     android:inputType="number"
                     android:padding="15dp" />
 
-                <EditText
-                    android:id="@+id/type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableStart="@drawable/ic_type_dark"
-                    android:drawablePadding="10dp"
-                    android:hint="Trip type"
-                    android:inputType="number"
-                    android:padding="15dp" />
-
 
                 <EditText
                     android:id="@+id/trip_time"
@@ -191,7 +180,7 @@
                     android:inputType="none"
                     android:padding="15dp"
                     android:paddingStart="20dp"
-                    tools:ignore="TextFields"/>
+                    tools:ignore="TextFields" />
 
                 <EditText
                     android:id="@+id/trip_date"

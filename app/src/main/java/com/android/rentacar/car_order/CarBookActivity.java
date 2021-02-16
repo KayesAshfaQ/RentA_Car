@@ -13,6 +13,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -36,15 +39,18 @@ import retrofit2.Response;
 
 public class CarBookActivity extends AppCompatActivity {
 
-    String currentTime;
-    String pickup_edt, destination_edt, passenger_edt, date_edt, time_edt;
-    String name, price, carImage, getCell, vehicle_no;
-    ImageView expandedImage;
-    Button confirm_book;
-    TextView car_name, fare;
-    EditText pickup, destination, mobile_no, passenger_no, type, trip_time, trip_date;
+    private String currentTime;
+    private String pickup_edt, destination_edt, passenger_edt, date_edt, time_edt;
+    private String name, price, carImage, getCell, vehicle_no;
+    private int tripType;
+    private ImageView expandedImage;
+    private Button confirm_book;
+    private TextView car_name, fare;
+    private EditText pickup, destination, mobile_no, passenger_no, trip_time, trip_date;
+    private AutoCompleteTextView type;
     private ApiInterface apiInterface;
     private ProgressDialog loading;
+    private String[] typeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +87,7 @@ public class CarBookActivity extends AppCompatActivity {
         trip_time = findViewById(R.id.trip_time);
         trip_date = findViewById(R.id.trip_date);
         confirm_book = findViewById(R.id.confirm_book);
-        type = findViewById(R.id.type);
+        //type = findViewById(R.id.type);
 
 
         //set_value
@@ -93,6 +99,18 @@ public class CarBookActivity extends AppCompatActivity {
             mobile_no.setText(getCell);
         }
         //setTimePicker();
+
+        //trip type
+        /*typeList = new String[]{"On Hour basis", "Full Day Basis"};
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(CarBookActivity.this, android.R.layout.activity_list_item, android.R.id.text1);
+        type.setAdapter(arrayAdapter);
+        type.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                tripType = position;
+            }
+        });*/
+
         trip_time.setFocusable(false);
         trip_time.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,12 +123,12 @@ public class CarBookActivity extends AppCompatActivity {
                     public void onTimeSet(TimePicker timePicker, int hour, int min) {
 
                         String am_pm = (timePicker.getCurrentHour() < 12) ? "AM" : "PM";
-                        if (hour>12){
-                            hour=hour-12;
-                        }else if (hour==0){
-                            hour=12;
+                        if (hour > 12) {
+                            hour = hour - 12;
+                        } else if (hour == 0) {
+                            hour = 12;
                         }
-                        trip_time.setText(hour + " : " + min+" "+ am_pm);
+                        trip_time.setText(hour + " : " + min + " " + am_pm);
 
                     }
                 }, 10, 0, false);

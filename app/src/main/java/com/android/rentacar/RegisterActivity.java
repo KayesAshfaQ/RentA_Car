@@ -59,7 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     EditText etxtName, etxtCell, etxtPassword, etxtArea, etxtGender, etxtAccount;
     private ApiInterface apiInterface;
-    String text = "", user_name, user_cell, user_password, user_area, user_gender, lat, lng, user_token, user_account;
+    String text = "", user_name, user_cell, user_password, user_area, user_gender, lat, lng, user_token = "", user_account;
     private ProgressDialog loading;
     private static final String CHANNEL_ID = "rent_a_car";
     private static final String CHANNEL_NAME = "Rent a Car";
@@ -89,17 +89,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
-        //getting user token
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
 
-                    @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (task.isSuccessful()) {
-                            user_token = task.getResult().getToken();
-                        }
-                    }
-                });
 
         //create notification channel
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
