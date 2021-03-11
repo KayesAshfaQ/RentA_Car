@@ -13,7 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.android.rentacar.ConnectionDetector;
+import com.android.rentacar.utils.ConnectionDetector;
 import com.android.rentacar.R;
 import com.android.rentacar.adapter.ProductAdapter;
 import com.android.rentacar.model.Product;

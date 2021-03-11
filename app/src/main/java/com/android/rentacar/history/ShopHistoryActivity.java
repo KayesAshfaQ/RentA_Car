@@ -11,8 +11,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.android.rentacar.ConnectionDetector;
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.ConnectionDetector;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
 import com.android.rentacar.adapter.ShopHistoryMainAdapter;
 import com.android.rentacar.model.ShopOrderUser;

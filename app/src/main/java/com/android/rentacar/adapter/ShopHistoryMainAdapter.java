@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.rentacar.R;
 import com.android.rentacar.history.ShopHistoryDetailsActivity;
-import com.android.rentacar.model.ShopOrder;
 import com.android.rentacar.model.ShopOrderUser;
 
 import java.util.List;
@@ -74,8 +73,8 @@ public class ShopHistoryMainAdapter extends RecyclerView.Adapter<ShopHistoryMain
         public ShopHistoryMainViewHolder(@NonNull View itemView) {
             super(itemView);
             orderId = itemView.findViewById(R.id.orderId);
-            date = itemView.findViewById(R.id.date);
-            item_price = itemView.findViewById(R.id.item_price);
+            date = itemView.findViewById(R.id.driver_name);
+            item_price = itemView.findViewById(R.id.item_model);
             order_status = itemView.findViewById(R.id.order_status);
         }
     }

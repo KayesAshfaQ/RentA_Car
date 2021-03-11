@@ -28,7 +28,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".history.ShopHistoryActivity"></activity>
+        <activity android:name=".user_rent.UserCarHistoryActivity"></activity>
+        <activity android:name=".user_rent.RentUserCarActivity" />
+        <activity android:name=".history.ShopHistoryActivity" />
         <activity android:name=".history.ShopHistoryDetailsActivity" />
         <activity android:name=".shop.OrderActivity" />
         <activity android:name=".profile.ProfileActivity" />
@@ -53,7 +55,7 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <activity
-            android:name=".MapsActivity"
+            android:name=".utils.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".shop.ProductDetailsActivity" />
         <activity android:name=".shop.ProductActivity" />

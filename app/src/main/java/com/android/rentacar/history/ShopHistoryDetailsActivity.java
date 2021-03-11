@@ -6,14 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.android.rentacar.ConnectionDetector;
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.ConnectionDetector;
 import com.android.rentacar.R;
 import com.android.rentacar.adapter.ShopHistoryDetailsAdapter;
 import com.android.rentacar.model.ShopOrder;
@@ -47,7 +44,7 @@ public class ShopHistoryDetailsActivity extends AppCompatActivity {
         address = findViewById(R.id.address);
         name = findViewById(R.id.name);
         mobile = findViewById(R.id.mobile);
-        time = findViewById(R.id.time);
+        time = findViewById(R.id.car_number);
         status = findViewById(R.id.status);
         payMethod = findViewById(R.id.paymet_method);
 

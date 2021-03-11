@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 
-import com.android.rentacar.ConnectionDetector;
+import com.android.rentacar.utils.ConnectionDetector;
 import com.android.rentacar.R;
 import com.android.rentacar.adapter.InformationAdapter;
 import com.android.rentacar.model.Information;

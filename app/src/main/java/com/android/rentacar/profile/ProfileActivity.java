@@ -2,23 +2,17 @@ package com.android.rentacar.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.android.rentacar.ConnectionDetector;
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.ConnectionDetector;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
-import com.android.rentacar.blog.InformationActivity;
-import com.android.rentacar.model.User;
 import com.android.rentacar.model.UserProfile;
 import com.android.rentacar.remote.ApiClient;
 import com.android.rentacar.remote.ApiInterface;

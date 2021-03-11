@@ -9,7 +9,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.android.rentacar.ConnectionDetector;
+import com.android.rentacar.utils.ConnectionDetector;
 import com.android.rentacar.R;
 import com.android.rentacar.adapter.WeddingCarAdapter;
 import com.android.rentacar.model.Car;

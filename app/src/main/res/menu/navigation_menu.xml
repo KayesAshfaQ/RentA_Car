@@ -26,6 +26,11 @@
                     android:id="@+id/packages"
                     android:icon="@drawable/ic_wedding_pack_small_black"
                     android:title="Wedding Packages" />
+
+                <item
+                    android:id="@+id/user_car"
+                    android:icon="@drawable/ic_baseline_directions_car"
+                    android:title="Add Car for Rent" />
             </menu>
         </item>
 
@@ -46,6 +51,11 @@
                     android:id="@+id/shop_history"
                     android:icon="@drawable/ic_history_black"
                     android:title="Shopping History" />
+
+                <item
+                    android:id="@+id/user_car_history"
+                    android:icon="@drawable/ic_history_black"
+                    android:title="My Cars for rent" />
 
             </menu>
         </item>

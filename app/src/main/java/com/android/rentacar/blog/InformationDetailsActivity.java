@@ -6,13 +6,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
 import com.bumptech.glide.Glide;
 
@@ -36,8 +35,8 @@ public class InformationDetailsActivity extends AppCompatActivity {
         //find views
         imageView = findViewById(R.id.blog_image);
         titleView = findViewById(R.id.title);
-        dateView = findViewById(R.id.date);
-        timeView = findViewById(R.id.time);
+        dateView = findViewById(R.id.driver_name);
+        timeView = findViewById(R.id.car_number);
         detailsView = findViewById(R.id.details);
         linkView = findViewById(R.id.link);
 

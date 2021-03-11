@@ -1,4 +1,4 @@
-package com.android.rentacar;
+package com.android.rentacar.utils;
 
 public class Constant {
 

@@ -1,7 +1,7 @@
 package com.android.rentacar.remote;
 
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -34,6 +34,7 @@ import android.widget.Toast;
 import com.android.rentacar.model.User;
 import com.android.rentacar.remote.ApiClient;
 import com.android.rentacar.remote.ApiInterface;
+import com.android.rentacar.utils.ConnectionDetector;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;

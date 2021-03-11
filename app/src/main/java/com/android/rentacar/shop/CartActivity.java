@@ -19,16 +19,14 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.android.rentacar.ConnectionDetector;
-import com.android.rentacar.Constant;
-import com.android.rentacar.MainActivity;
+import com.android.rentacar.utils.ConnectionDetector;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
 import com.android.rentacar.adapter.CartAdapter;
 import com.android.rentacar.model.Cart;
 import com.android.rentacar.remote.ApiClient;
 import com.android.rentacar.remote.ApiInterface;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

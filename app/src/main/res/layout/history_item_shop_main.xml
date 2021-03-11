@@ -40,7 +40,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/item_price"
+                android:id="@+id/item_model"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/orderId"
@@ -50,10 +50,10 @@
 
 
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/driver_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item_price"
+                android:layout_below="@id/item_model"
                 android:text="Item Date"
                 android:textSize="16sp" />
 
@@ -62,7 +62,7 @@
                 android:id="@+id/order_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/date"
+                android:layout_below="@id/driver_name"
                 android:text="order_status"
                 android:textSize="16sp" />
 

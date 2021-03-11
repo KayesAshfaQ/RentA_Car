@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
 import com.android.rentacar.model.ShopOrder;
 import com.bumptech.glide.Glide;
@@ -62,9 +62,9 @@ public class ShopHistoryDetailsAdapter extends RecyclerView.Adapter<ShopHistoryD
         public ShopHistoryViewHolder(@NonNull View itemView) {
             super(itemView);
             item_image = itemView.findViewById(R.id.item_image);
-            item_name = itemView.findViewById(R.id.item_name);
+            item_name = itemView.findViewById(R.id.item_brand);
             item_amount = itemView.findViewById(R.id.item_amount);
-            item_price = itemView.findViewById(R.id.item_price);
+            item_price = itemView.findViewById(R.id.item_model);
             item_no = itemView.findViewById(R.id.item_no);
         }
     }

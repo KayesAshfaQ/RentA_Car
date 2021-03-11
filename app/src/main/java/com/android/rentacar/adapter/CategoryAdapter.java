@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.shop.ProductActivity;
 import com.android.rentacar.R;
 import com.android.rentacar.model.Category;

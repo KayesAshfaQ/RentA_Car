@@ -29,6 +29,10 @@ import com.android.rentacar.history.ShopHistoryActivity;
 import com.android.rentacar.profile.ProfileActivity;
 import com.android.rentacar.shop.CartActivity;
 import com.android.rentacar.shop.CategoryActivity;
+import com.android.rentacar.user_rent.RentUserCarActivity;
+import com.android.rentacar.user_rent.UserCarHistoryActivity;
+import com.android.rentacar.utils.Constant;
+import com.android.rentacar.utils.MyCustomPagerAdapter;
 import com.android.rentacar.wedding_package.WeddingPackActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -224,6 +228,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, WeddingPackActivity.class));
                 break;
 
+            case R.id.user_car:
+                startActivity(new Intent(MainActivity.this, RentUserCarActivity.class));
+                break;
+
             case R.id.logout: {
 
                 AlertDialog.Builder logoutBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -269,6 +277,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.wedding_car_history:
                 startActivity(new Intent(MainActivity.this, HistoryWeddingPackActivity.class));
+                break;
+
+            case R.id.user_car_history:
+                startActivity(new Intent(MainActivity.this, UserCarHistoryActivity.class));
                 break;
 
             case R.id.shop_history:

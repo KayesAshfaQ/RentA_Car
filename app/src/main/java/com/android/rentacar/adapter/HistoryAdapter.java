@@ -2,9 +2,6 @@ package com.android.rentacar.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.rentacar.Constant;
 import com.android.rentacar.R;
 import com.android.rentacar.model.CarBook;
 
@@ -90,10 +86,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             super(itemView);
 
             type = itemView.findViewById(R.id.txt_type);
-            item_name = itemView.findViewById(R.id.item_name);
-            item_price = itemView.findViewById(R.id.item_price);
-            date = itemView.findViewById(R.id.date);
-            time = itemView.findViewById(R.id.time);
+            item_name = itemView.findViewById(R.id.item_brand);
+            item_price = itemView.findViewById(R.id.item_model);
+            date = itemView.findViewById(R.id.driver_name);
+            time = itemView.findViewById(R.id.car_number);
             status = itemView.findViewById(R.id.status);
 
         }

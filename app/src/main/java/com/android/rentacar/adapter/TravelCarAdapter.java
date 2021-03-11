@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.rentacar.car_order.CarBookActivity;
 import com.android.rentacar.car_order.CarDetailsActivity;
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
 import com.android.rentacar.model.Car;
 import com.bumptech.glide.Glide;

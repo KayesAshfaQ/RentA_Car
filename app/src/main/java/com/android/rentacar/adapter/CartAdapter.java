@@ -1,24 +1,17 @@
 package com.android.rentacar.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.R;
 import com.android.rentacar.model.Cart;
 import com.android.rentacar.remote.ApiClient;
 import com.android.rentacar.remote.ApiInterface;
-import com.android.rentacar.shop.CartActivity;
-import com.android.rentacar.shop.ProductDetailsActivity;
 import com.bumptech.glide.Glide;
 
 

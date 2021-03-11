@@ -12,10 +12,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -32,11 +30,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.android.rentacar.model.User;
 import com.android.rentacar.remote.ApiClient;
 import com.android.rentacar.remote.ApiInterface;
+import com.android.rentacar.utils.ConnectionDetector;
+import com.android.rentacar.utils.Constant;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;

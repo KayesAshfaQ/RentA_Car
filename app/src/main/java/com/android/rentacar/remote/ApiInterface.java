@@ -1,10 +1,10 @@
 package com.android.rentacar.remote;
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.model.RentUserCar;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.model.CarBook;
 import com.android.rentacar.model.Cart;
 import com.android.rentacar.model.Category;
-import com.android.rentacar.model.History;
 import com.android.rentacar.model.Information;
 import com.android.rentacar.model.OrderWeddingPack;
 import com.android.rentacar.model.Product;
@@ -14,7 +14,6 @@ import com.android.rentacar.model.User;
 import com.android.rentacar.model.Car;
 import com.android.rentacar.model.UserProfile;
 import com.android.rentacar.model.WeddingPack;
-import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
@@ -204,5 +203,26 @@ public interface ApiInterface {
     @GET("get_shop_order_userinfo.php")
     Call<List<ShopOrderUser>> getOrderId(
             @Query("mobile") String mobile);
+
+
+    //add user rented car
+    @FormUrlEncoded
+    @POST("set_user_car_rent.php")
+    Call<RentUserCar> addUserCar(
+            @Field("model") String model,
+            @Field("brand") String brand,
+            @Field("car_number") String car_number,
+            @Field("seat_no") String seat_no,
+            @Field("fare") String fare,
+            @Field("driver_name") String driver_name,
+            @Field("mobile_no") String mobile_no,
+            @Field("status") String status
+    );
+
+    //get rented car for user
+    @GET("get_user_car_rent.php")
+    Call<List<RentUserCar>> getUserCar(
+            @Query("mobile_no") String mobile_no
+    );
 
 }

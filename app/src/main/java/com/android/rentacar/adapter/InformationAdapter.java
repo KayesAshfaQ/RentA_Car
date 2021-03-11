@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.blog.InformationDetailsActivity;
 import com.android.rentacar.R;
 import com.android.rentacar.model.Information;
@@ -77,8 +77,8 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
             imageView = itemView.findViewById(R.id.blog_image);
             title = itemView.findViewById(R.id.title);
             info = itemView.findViewById(R.id.info);
-            date = itemView.findViewById(R.id.date);
-            time = itemView.findViewById(R.id.time);
+            date = itemView.findViewById(R.id.driver_name);
+            time = itemView.findViewById(R.id.car_number);
 
         }
     }

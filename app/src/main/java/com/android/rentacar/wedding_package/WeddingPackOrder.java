@@ -20,8 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.android.rentacar.ConnectionDetector;
-import com.android.rentacar.Constant;
+import com.android.rentacar.utils.ConnectionDetector;
+import com.android.rentacar.utils.Constant;
 import com.android.rentacar.MainActivity;
 import com.android.rentacar.R;
 import com.android.rentacar.model.OrderWeddingPack;

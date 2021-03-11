@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.rentacar.R;
-import com.android.rentacar.model.CarBook;
 import com.android.rentacar.model.OrderWeddingPack;
 
 import java.util.List;
@@ -75,10 +74,10 @@ public class PackageHistoryAdapter extends RecyclerView.Adapter<PackageHistoryAd
             super(itemView);
 
             type = itemView.findViewById(R.id.txt_type);
-            item_name = itemView.findViewById(R.id.item_name);
-            item_price = itemView.findViewById(R.id.item_price);
-            date = itemView.findViewById(R.id.date);
-            time = itemView.findViewById(R.id.time);
+            item_name = itemView.findViewById(R.id.item_brand);
+            item_price = itemView.findViewById(R.id.item_model);
+            date = itemView.findViewById(R.id.driver_name);
+            time = itemView.findViewById(R.id.car_number);
             status = itemView.findViewById(R.id.status);
 
         }

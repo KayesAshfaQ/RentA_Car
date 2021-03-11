@@ -1,4 +1,4 @@
-package com.android.rentacar;
+package com.android.rentacar.utils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.android.rentacar.R;
 
 public class MyCustomPagerAdapter extends PagerAdapter {
     Context context;

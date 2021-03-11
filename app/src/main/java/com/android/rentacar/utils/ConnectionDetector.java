@@ -1,4 +1,4 @@
-package com.android.rentacar;
+package com.android.rentacar.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
